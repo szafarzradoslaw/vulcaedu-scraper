@@ -1,0 +1,15 @@
+vulcaedu-scraper/
+│
+├── .env                    # EMAIL, PASSWORD, credentials
+├── requirements.txt        # all dependencies
+│
+├── main.py                 # entry point — orchestrates the full flow
+│
+├── eduvulcan/
+│   ├── session.py          # Playwright login → returns cookies + key
+│   └── api.py              # fetch_week() and any future API calls
+│
+└── calendar/
+    ├── client.py           # Google Calendar auth + connection
+    ├── events.py           # create / update / delete events
+    └── diff.py             # compare fetched lessons vs existing events
